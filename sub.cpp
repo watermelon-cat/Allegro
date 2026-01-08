@@ -54,16 +54,16 @@ int main() {
         // ----- DRAW -----
         al_clear_to_color(ocean_blue); //screen fill
 
-        for (int i = 0; i < 5; i++) {
+       /* for (int i = 0; i < 5; i++) {
             al_draw_filled_rectangle(0, 600, 800, 500, sand_beige)
-        }
+        }*/
 
         // SAND (INTENTIONALLY ON THE WRONG EDGE)
         // Hint: sand should be at the bottom, not the top.
         al_draw_filled_rectangle(0, 600, 800, 500, sand_beige); //al_draw_filled_rectangle(x1, y1, x2, y2, color);
 
         // Bubbles (INTENTIONALLY THICK)
-        for (const auto& b : bubbles) {
+        for (const auto& b : bubbles) { //auto sets the right size/memoery based on vector bubbles
             al_draw_circle(b.x, b.y, b.r, bubble_white, 1.0);
         }
 
